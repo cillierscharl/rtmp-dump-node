@@ -1,10 +1,9 @@
 var rtmpDump = require('./lib/node-rtmpdump');
 var twitchRTMPDump = require('./lib/node-rtmpdump-twitch');
 
-
 function twitchOutputToVlc(){
 	var output = new rtmpDump.VlcOutput('C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe'),
-		twitchDump = new twitchRTMPDump('cdewx','',output);
+		twitchDump = new twitchRTMPDump('wtducksauce','720p',output);
 }
 
 function twitchOutputToFile(){
@@ -18,4 +17,4 @@ function twitchOutputToFFMpeg(){
 		twitchDump = new twitchRTMPDump('cdewx','',output);
 }
 
-twitchOutputToFFMpeg();
+twitchOutputToVlc();

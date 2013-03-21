@@ -3,6 +3,7 @@
  	"version": "0.0.1", 
  	"dependencies": {
     	"express": "latest",
-    	"xml2js":"latest"
+    	"xml2js":"latest",
+    	"colors" : "latest"
   	}
 }
