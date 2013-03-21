@@ -108,7 +108,7 @@ var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','','rtmp://url');
 var twitchDump = new twitchRTMPDump('reckful','live',output);
 ```
 
-Example - RTMPDump Twitch - > FFMpeg - > IIS Smooth Streaming Example
+Example - RTMPDump Twitch - > FFMpeg - > IIS Smooth Streaming
 ---
 
 ```javascript
