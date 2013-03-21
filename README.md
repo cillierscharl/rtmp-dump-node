@@ -41,7 +41,7 @@ Example - VLC Output
 ---
 ```javascript
 // Specify the output type and destination:
-// File Output only requires the path of the file.
+// VLC Output only requires the path of the VLC executable.
 var output = new rtmpDump.VlcOutput('C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe');
 ```
 
