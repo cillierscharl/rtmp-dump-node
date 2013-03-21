@@ -52,7 +52,7 @@ Example - FFMpeg Output
 // Second Parameter set for FFMpeg flags.
 // Empty quotes invoke the default settings = DefaultSettings - c:a c:v -f flv
 // Copy audio and video from source output to flv
-var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','','rtmp://url live=1');
+var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','','rtmp://url');
 // Verbose example:
 var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','c:a c:v -f flv','rtmp://url');
 ```
@@ -108,7 +108,7 @@ var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','','rtmp://url');
 var twitchDump = new twitchRTMPDump('reckful','live',output);
 ```
 
-Example - RTMPDump - > FFMpeg - > IIS Smooth Streaming Example
+Example - RTMPDump Twitch - > FFMpeg - > IIS Smooth Streaming Example
 ---
 
 ```javascript
