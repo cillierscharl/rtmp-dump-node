@@ -1,4 +1,4 @@
-Node-Twitch-RTMPDump
+Node-RTMPDump
 ====================
 
 RTMPDump utility for Node.js.
