@@ -57,7 +57,7 @@ var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','','rtmp://url live=1');
 var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','c:a c:v -f flv','rtmp://url');
 ```
 
-Example - VLC Output
+Example - Custom Output
 ---
 ```javascript
 // Specify the output type and destination:
@@ -71,6 +71,18 @@ Node-RTMPDump-Twitch
 ====================
 
 Twitch extension to show how you can abstract away certain complexity setting up RTMPDump for a specific provider.
+
+Example - RTMPDump Twitch to VLC
+---
+
+```javascript
+// VLC Output only requires the path of the VLC executable.
+var output = new rtmpDump.VlcOutput('C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe');
+// Pass in the name of a Twitch Stream Channel : ex. http://twitch.tv/reckful
+// It will then get all the parameters it requires from meta data sites and start RTMPDump with the output specified.
+// Parameters : Channel Name, Quality Setting, output object.
+var twitchDump = new twitchRTMPDump('reckful','live',output);
+```
 
 Example - RTMPDump Twitch to File
 ---
@@ -90,6 +102,19 @@ Example - RTMPDump Twitch to FFMpeg
 ```javascript
 // Create output to FFMpeg pointing to a RTMP Server
 var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','','rtmp://url');
+// Pass in the name of a Twitch Stream Channel : ex. http://twitch.tv/reckful
+// It will then get all the parameters it requires from meta data sites and start RTMPDump with the output specified.
+// Parameters : Channel Name, Quality Setting, output object.
+var twitchDump = new twitchRTMPDump('reckful','live',output);
+```
+
+Example - RTMPDump - > FFMpeg - > IIS Smooth Streaming Example
+---
+
+```javascript
+// Create output to FFMpeg pointing to an IIS Server with Media Services Server
+// Pass in some parameters - Update the audio and video bitrate accordingly. (Required by IIS to be verbose about the rates)
+var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','-vcodec libx264 -b:v 444k -acodec libvo_aacenc -ab 128k -ar 48000 -movflags isml+frag_keyframe -f ismv','http://localhost/livestream.isml/Streams(Encoder1)');
 // Pass in the name of a Twitch Stream Channel : ex. http://twitch.tv/reckful
 // It will then get all the parameters it requires from meta data sites and start RTMPDump with the output specified.
 // Parameters : Channel Name, Quality Setting, output object.
