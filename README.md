@@ -1,7 +1,7 @@
 Node-RTMPDump
 =============
 
-Flexible RTMPDump utility for Node.js built with a few output abstractions so you don't have to remember flag order, quote wrapping, escaping or syntax.
+Flexible RTMPDump utility for Node.js built with a few output and option helper functions so you don't have to remember flag order, quote wrapping, escaping or syntax.
 
 RTMPDump Output helper functions for the following:
 ---
