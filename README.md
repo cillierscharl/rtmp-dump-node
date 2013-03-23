@@ -25,7 +25,8 @@ var output = new rtmpDump.FileOutput('newFile.flv');
 // Specify the flags to use as well as their parameter, for parameter-less flags omit the value.
 // Order is not important as the parameters will be sorted correctly.
 var rtmpDumpOptions = [
-    new rtmpDump.Option( rtmpDump.options.url , 'rtmp://url' )
+    new rtmpDump.Option( rtmpDump.options.url , 'rtmp://url' ),
+    new rtmpDump.Option( RTMPDump.options.live )
 ];
 
 // Create the command.
