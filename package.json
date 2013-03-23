@@ -2,7 +2,6 @@
  	"name": "node-twitch-rtmpdump", 
  	"version": "0.0.1", 
  	"dependencies": {
-    	"express": "latest",
     	"xml2js":"latest",
     	"colors" : "latest"
   	}
