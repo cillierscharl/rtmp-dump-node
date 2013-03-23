@@ -82,7 +82,7 @@ var output = new rtmpDump.VlcOutput('C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc
 // Pass in the name of a Twitch Stream Channel : ex. http://twitch.tv/reckful
 // It will then get all the parameters it requires from meta data sites and start RTMPDump with the output specified.
 // Parameters : Channel Name, Quality Setting, output object.
-var twitchDump = new twitchRTMPDump('reckful','live',output);
+var twitchDump = new TwitchRTMPDump('reckful','live',output);
 ```
 
 Example - RTMPDump Twitch to File
@@ -94,7 +94,7 @@ var output = new rtmpDump.FileOutput('newFile.flv');
 // Pass in the name of a Twitch Stream Channel : ex. http://twitch.tv/reckful
 // It will then get all the parameters it requires from meta data sites and start RTMPDump with the output specified.
 // Parameters : Channel Name, Quality Setting, output object.
-var twitchDump = new twitchRTMPDump('reckful','live',output);
+var twitchDump = new TwitchRTMPDump('reckful','live',output);
 ```
 
 Example - RTMPDump Twitch to FFMpeg
@@ -106,7 +106,7 @@ var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','','rtmp://url');
 // Pass in the name of a Twitch Stream Channel : ex. http://twitch.tv/reckful
 // It will then get all the parameters it requires from meta data sites and start RTMPDump with the output specified.
 // Parameters : Channel Name, Quality Setting, output object.
-var twitchDump = new twitchRTMPDump('reckful','live',output);
+var twitchDump = new TwitchRTMPDump('reckful','live',output);
 ```
 
 Example - RTMPDump Twitch - > FFMpeg - > IIS Smooth Streaming
@@ -119,7 +119,7 @@ var output = new rtmpDump.FfmpegOutput('ffmpeg.exe','-vcodec libx264 -b:v 444k -
 // Pass in the name of a Twitch Stream Channel : ex. http://twitch.tv/reckful
 // It will then get all the parameters it requires from meta data sites and start RTMPDump with the output specified.
 // Parameters : Channel Name, Quality Setting, output object.
-var twitchDump = new twitchRTMPDump('reckful','live',output);
+var twitchDump = new TwitchRTMPDump('reckful','live',output);
 ```
 
 ----------------------------------------
