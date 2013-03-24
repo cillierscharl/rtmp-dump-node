@@ -1,9 +1,11 @@
 var rtmpDump = require('./lib/node-rtmpdump');
 var twitchRTMPDump = require('./lib/node-rtmpdump-twitch');
 
+var TwitchApplication = require('./lib/node-twitchApplication');
+
 function twitchOutputToVlc(){
 	var output = new rtmpDump.VlcOutput('C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe'),
-		twitchDump = new twitchRTMPDump('wtducksauce','720p',output);
+		twitchDump = new twitchRTMPDump('catastrophiq','live',output);
 }
 
 function twitchOutputToFile(){
@@ -17,4 +19,7 @@ function twitchOutputToFFMpeg(){
 		twitchDump = new twitchRTMPDump('cdewx','',output);
 }
 
-twitchOutputToVlc();
+var app = new TwitchApplication();
+app.getStreamsByGame();
+
+

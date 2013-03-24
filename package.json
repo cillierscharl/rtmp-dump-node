@@ -3,6 +3,9 @@
  	"version": "0.0.1", 
  	"dependencies": {
     	"xml2js":"latest",
-    	"colors" : "latest"
+    	"colors" : "latest",
+    	"cli-table" : "latest",
+    	"underscore" : "latest",
+    	"open" : "latest"
   	}
 }
