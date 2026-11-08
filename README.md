@@ -1,6 +1,25 @@
 Node-RTMPDump
 =============
 
+> [!WARNING]
+> **Archived in November 2026. This no longer works and isn't maintained.**
+>
+> It was written in March–April 2013, when Twitch still served streams over RTMP from its Justin.tv infrastructure. The idea was to skip the Flash player: pick a channel from the top *World of Warcraft: Mists of Pandaria* streams in a little CLI, then watch it in VLC, save it to a file, or restream it through FFmpeg.
+>
+> Everything it talked to is gone:
+>
+> - **The Kraken API** (`api.twitch.tv/kraken`), which listed live streams, was shut down in 2022.
+> - **`usher.twitch.tv/find`**, which handed out the RTMP URL and token, and the **justin.tv** player SWF no longer respond.
+> - **Flash** reached end of life in 2020, which took SWF verification with it. Twitch moved playback to HLS long before that.
+> - **rtmpdump** itself hasn't had a proper release since 2010.
+>
+> For the same job today:
+>
+> - [Streamlink](https://streamlink.github.io/) or [yt-dlp](https://github.com/yt-dlp/yt-dlp) to watch or record Twitch streams.
+> - [FFmpeg](https://ffmpeg.org/), which reads `rtmp://` URLs natively: `ffmpeg -i rtmp://host/app/stream -c copy out.flv`.
+>
+> The code is left exactly as it was, for posterity.
+
 Flexible RTMPDump utility for Node.js built with a few output and option helper functions so you don't have to remember flag order, quote wrapping, escaping or syntax.
 
 RTMPDump Output helper functions for the following:
@@ -13,7 +32,7 @@ RTMPDump Output helper functions for the following:
 Example - File Output
 ---
 
-Full list of options for the options array : [node-rtmpdump.js#L135](https://github.com/f0xy/Node-RTMPDump/blob/master/lib/node-rtmpdump.js#L135)
+Full list of options for the options array : [node-rtmpdump.js#L132](https://github.com/cillierscharl/rtmp-dump-node/blob/master/lib/node-rtmpdump.js#L132)
 
 ```javascript
 var rtmpDump = require('./lib/node-rtmpdump');
@@ -127,6 +146,6 @@ var twitchDump = new TwitchRTMPDump('reckful','live',output);
 Links:
 ---
 
-RTMPDump Utility Home Page : http://rtmpdump.mplayerhq.hu/
+RTMPDump Utility Home Page : https://rtmpdump.mplayerhq.hu/
 
 
